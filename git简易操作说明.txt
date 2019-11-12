@@ -4,3 +4,11 @@ git status
 git commit -m "想要加入的信息"
 git remote add origin  https://github.com/Xuefeima/learning-code-for-git.git(repository的网址)
 git push -u origin master
+
+
+echo "# git20191112" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Xuefeima/git20191112.git
+git push -u origin master
