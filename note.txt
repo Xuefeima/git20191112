@@ -1,0 +1,68 @@
+17.   类DynamicArray： 二维数组  displayArray()  setValue()   getValue()   getRowSize()    getColSize()
+37.   exit(15)
+117.  结构体：nextMove   crossID   roadID
+123.  类cross:ID,NumOfRoads    roadIDSet[4]--记录了道路信息id  和与之相连的4条路
+		sortedRoadIDList 为什么要排序
+193.  类simplexRoad：   setNextRoadID()   getNextRoadID()   setRoadInfo()   getRoadInfo()
+					NextLeftRoadID    NextRightRoadID     NextStraightRoadID    roadInfoArray
+265.  类CarPlan:   roadID   orientation    nextDirection
+273.  类road：     road(laneNum, len)初始化一个行为车道数，列为车道长度的二维DynamicArray数组
+	int ID;						getRoadID()
+	int IsDuplex;				isDuplex()
+	int Length;					getRoadLength()
+	int NumOfLane;  			getLaneNum()
+	int StartCrossID;			getStartCrossID()
+	int EndCrossID;				getEndCrossID()
+	int MaxSpeed;				getRoadMaxSpeed()
+	simplexRoad road0;  双向路的正反
+	simplexRoad road1;
+	updateRoadID(){ID -= firstID;}
+	updateCrossID(){StartCrossID -= firstID; EndCrossID -= firstID;}
+	changeGridState(int direction, int x, int y, int carId)   
+	display()
+440：类car：	             displayPlan()
+	int ID;
+	int MaxCarSpeed;
+	int StartPoint;
+	int EndPoint;
+	int MinTime;
+	int PlannedTime;
+	int ActualTime;
+	int FinishedTime;
+	int CarState; // -1:未出发；0:已完成调度(终止状态)；1:正在调度(等待状态)
+	
+	std::vector<CarPlan> Plan;！！！！！！！！！！！！！！元素为CarPlan的vector数组
+	int PlanStep;
+	
+			451：类CarPosition  在那条路上  方向是什么   在第几车道   存放当前和期待车位置的类  为car类中的一个类
+				int roadID;
+				int orientation;
+				int laneID;
+				int positionID;
+512：类systemInfo    
+	int Time;
+	int TotalCarNum; 
+	int OnlineCarNum;
+	int OfflineCarNum;
+	int FinishedCarNum;
+	int carNumInWaiting;
+	std::vector<int> OnlineCarList;
+	std::vector<int> OfflineCarList;
+	std::vector<int> FinishedCarList;
+	finishOneCar()
+	startOneCar()
+	roadID加上501是代表第一个车的ID
+	
+	
+#define STRAIGHT 0
+#define LEFT 1
+#define RIGHT 2
+
+265：
+class CarPlan {
+public:
+	int roadID;
+	int orientation; // 0:+,1:-;
+	int nextDirection;
+
+};
