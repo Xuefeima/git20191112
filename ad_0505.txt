@@ -2692,4 +2692,5 @@ SPIWrite	157,00	// RSSI Wait
 SPIWrite	158,0D	// RSSI Mode Select
 SPIWrite	15C,67	// Power Measurement Duration
 
-SPIWrite    014,68  // Set Force rx and tx State bit
+SPIWrite    014,68  // Set Force rx and tx State bit#git 20200723
+test add
