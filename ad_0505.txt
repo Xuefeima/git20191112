@@ -1,3 +1,6 @@
+maxidifna
+
+
 //************************************************************
 // AD9361 R2 Auto Generated Initialization Script:  This script was
 // generated using the AD9361 Customer software Version 2.1.4
